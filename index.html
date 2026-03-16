@@ -1,121 +1,55 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Winary</title>
+  <title>Calice</title>
   <style>
-    :root {
-      --bg: #121212;
-      --card: #1c1c1c;
-      --text: #f4f1ea;
-      --muted: #b7ada3;
-      --accent: #d4a853;
-      --border: rgba(255,255,255,0.08);
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #1a0a0a;
+      color: #f5f0eb;
       min-height: 100vh;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      background: var(--bg);
-      color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      padding: 24px;
-    }
-
-    .wrap {
-      width: 100%;
-      max-width: 520px;
       text-align: center;
+      padding: 2rem;
     }
-
-    .logo {
-      width: 96px;
-      height: 96px;
-      object-fit: contain;
-      margin: 0 auto 20px;
-      display: block;
-    }
-
-    h1 {
-      margin: 0 0 10px;
-      font-size: 34px;
-      color: var(--accent);
-      font-weight: 700;
-    }
-
-    p {
-      margin: 0 0 28px;
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    .links {
-      display: grid;
-      gap: 14px;
-    }
-
-    .link-card {
-      display: block;
-      padding: 18px 20px;
-      border-radius: 14px;
-      background: var(--card);
-      border: 1px solid var(--border);
+    .logo { font-size: 3rem; margin-bottom: 1rem; }
+    h1 { font-size: 2.5rem; font-weight: 700; color: #c8a97e; margin-bottom: 0.75rem; }
+    p { font-size: 1.1rem; color: #b0a090; max-width: 480px; line-height: 1.6; margin-bottom: 2.5rem; }
+    .badges { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-bottom: 3rem; }
+    .badge {
+      background: #2e1a1a;
+      border: 1px solid #5a2d2d;
+      color: #c8a97e;
+      padding: 0.6rem 1.4rem;
+      border-radius: 2rem;
+      font-size: 0.9rem;
       text-decoration: none;
-      color: var(--text);
-      transition: transform 0.15s ease, border-color 0.15s ease;
+      transition: background 0.2s;
     }
-
-    .link-card:hover {
-      transform: translateY(-2px);
-      border-color: rgba(212,168,83,0.45);
-    }
-
-    .link-title {
-      display: block;
-      font-size: 16px;
-      font-weight: 600;
-      color: var(--accent);
-      margin-bottom: 4px;
-    }
-
-    .link-subtitle {
-      display: block;
-      font-size: 14px;
-      color: var(--muted);
-    }
+    .badge:hover { background: #3d2020; }
+    nav { display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center; }
+    nav a { color: #7a5c5c; font-size: 0.9rem; text-decoration: none; }
+    nav a:hover { color: #c8a97e; }
   </style>
 </head>
 <body>
-  <main class="wrap">
-    <img src="./logo.png" alt="Winary logo" class="logo" />
-
-    <h1>Winary</h1>
-    <p>Documentazione legale e supporto</p>
-
-    <section class="links">
-      <a class="link-card" href="./privacy.html">
-        <span class="link-title">Privacy Policy</span>
-        <span class="link-subtitle">Informazioni sul trattamento dei dati</span>
-      </a>
-
-      <a class="link-card" href="./terms.html">
-        <span class="link-title">Termini di utilizzo</span>
-        <span class="link-subtitle">Condizioni del servizio</span>
-      </a>
-
-      <a class="link-card" href="./support.html">
-        <span class="link-title">Supporto</span>
-        <span class="link-subtitle">Contatti e assistenza</span>
-      </a>
-    </section>
-  </main>
+  <div class="logo">🍷</div>
+  <h1>Calice</h1>
+  <p>Your personal wine cellar. Track, discover, and remember every bottle.</p>
+  <div class="badges">
+    <a class="badge" href="https://apps.apple.com" target="_blank">📱 App Store</a>
+    <a class="badge" href="https://play.google.com" target="_blank">🤖 Google Play</a>
+  </div>
+  <nav>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Service</a>
+    <a href="support.html">Support</a>
+  </nav>
 </body>
 </html>
